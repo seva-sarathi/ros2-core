@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ros2-core
+  namespace: seva-sarathi
+  labels:
+    app: ros2-core
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ros2-core
+  template:
+    metadata:
+      labels:
+        app: ros2-core
+    spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      containers:
+        - name: ros2-core
+          image: sevasarathi/ros2-core:latest
+          imagePullPolicy: Always
+          env:
+            - name: ROS_DOMAIN_ID
+              value: "0"
+            - name: RMW_IMPLEMENTATION
+              value: "rmw_cyclonedds_cpp"
+            - name: MQTT_HOST
+              value: "mqtt-broker-service"
+            - name: REDIS_HOST
+              value: "seva-redis"
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "2"
+              memory: "2Gi"
