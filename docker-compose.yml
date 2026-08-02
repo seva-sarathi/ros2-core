@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ${DOCKERHUB_ORG:-sevasarathi}/ros2-core:latest
+    image: nrgchandra/ros2-core:latest
     container_name: seva_ros2_core
     network_mode: "host"
     environment:
