@@ -1,0 +1,57 @@
+# Bootstrap graph for my_track_map.
+# The coordinates below are initial centerline estimates from the supplied map.
+# Replace/adjust them after validating in RViz with Fixed Frame = map.
+#
+# Coordinate frame: map
+# Map resolution: 0.05 m/pixel
+# Map origin: [-5.05, -7.53, 0]
+
+nodes:
+  track_01:
+    x: -4.275
+    y: -1.055
+    yaw: -0.822
+
+  track_02:
+    x: -3.625
+    y: -1.755
+    yaw: -0.768
+
+  track_03:
+    x: -2.775
+    y: -2.505
+    yaw: -0.713
+
+  track_04:
+    x: -1.775
+    y: -3.355
+    yaw: -0.704
+
+  track_05:
+    x: -0.775
+    y: -4.205
+    yaw: -0.719
+
+  track_06:
+    x: 0.225
+    y: -5.105
+    yaw: -0.733
+
+  track_07:
+    x: 1.225
+    y: -6.005
+    yaw: -0.644
+
+  track_08:
+    x: 2.225
+    y: -6.605
+    yaw: -0.540
+
+edges:
+  - [track_01, track_02]
+  - [track_02, track_03]
+  - [track_03, track_04]
+  - [track_04, track_05]
+  - [track_05, track_06]
+  - [track_06, track_07]
+  - [track_07, track_08]

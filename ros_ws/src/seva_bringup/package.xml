@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
-<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>seva_bringup</name>
-  <version>0.1.0</version>
-  <description>Launch configurations for Seva Sarathi MEC system</description>
+  <version>0.2.0</version>
+  <description>Launch configurations for the Seva Sarathi MEC ROS 2 server core.</description>
+
   <maintainer email="nrgchandra@gmail.com">Anurag Chandra</maintainer>
   <license>MIT</license>
 
   <depend>rclpy</depend>
   <depend>seva_telemetry</depend>
+  <depend>seva_navigation</depend>
+  <depend>nav2_map_server</depend>
+  <depend>nav2_lifecycle_manager</depend>
 
   <export>
     <build_type>ament_python</build_type>

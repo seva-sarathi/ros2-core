@@ -1,0 +1,8 @@
+string start_node
+string goal_node
+---
+bool success
+string message
+string[] node_ids
+float64 total_cost
+nav_msgs/Path path
